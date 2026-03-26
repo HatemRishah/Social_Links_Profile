@@ -2,7 +2,29 @@
   box-sizing: border-box;
 }
 body {
+  color: white;
   background-color: hsl(0, 0%, 8%);
   font-size: 14px;
   font-family: "Inter", sans-serif;
+  text-align: center;
+}
+#card {
+  background-color: hsl(0, 0%, 12%);
+  width: 30vw;
+  height: auto;
+  margin: 15vh auto;
+  border-radius: 10px;
+  padding: 20px;
+}
+img {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+}
+h1 {
+  font-weight: 700;
+}
+h3 {
+  color: hsl(75, 94%, 57%);
+  font-weight: 600;
 }
