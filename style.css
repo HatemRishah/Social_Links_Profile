@@ -7,10 +7,12 @@ body {
   font-size: 14px;
   font-family: "Inter", sans-serif;
   text-align: center;
+  font-weight: 500;
+  overflow-x: hidden;
 }
 #card {
   background-color: hsl(0, 0%, 12%);
-  width: 30vw;
+  width: 26vw;
   height: auto;
   margin: 15vh auto;
   border-radius: 10px;
@@ -33,4 +35,86 @@ h2 {
 }
 a {
   color: burlywood;
+}
+#links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 0px;
+  padding: 0px 16px 16px 16px;
+}
+#links li a {
+  text-decoration: none;
+  color: white;
+  background-color: hsl(0, 0%, 20%);
+  border-radius: 12px;
+  padding: 10px;
+  display: block;
+  transition: background-color 0.3s ease;
+  font-weight: 600;
+}
+#links li a:hover {
+  color: hsl(0, 0%, 8%);
+  background-color: hsl(75, 94%, 57%);
+  cursor: pointer;
+}
+#card:hover {
+  box-shadow: 0px 0px 20px 0px white;
+  transform: scale(1.05);
+}
+#card,
+footer {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  backface-visibility: hidden;
+  will-change: transform;
+}
+footer:hover {
+  transform: scale(1.05);
+}
+/* ========================================= */
+/* Media Queries (Desktop-First)             */
+/* ========================================= */
+
+@media (max-width: 1024px) {
+  #card {
+    width: 45vw;
+  }
+}
+
+@media (max-width: 768px) {
+  #card {
+    width: 65vw;
+    margin: 10vh auto;
+  }
+}
+
+@media (max-width: 480px) {
+  #card {
+    width: 90vw;
+    max-width: 380px;
+    margin: 5vh auto;
+    padding: 24px 12px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  #links {
+    padding: 0px 8px 8px 8px;
+  }
+
+  #card:hover,
+  footer:hover {
+    transform: none;
+    box-shadow: none;
+  }
 }
